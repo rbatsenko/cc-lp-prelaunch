@@ -5,8 +5,9 @@ import "./styles/tailwind.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Climbing Craft - connecting climbers and coaches",
-  description: "Comprehensive Climbing Coaching platform",
+  title: "Climbing Craft - Connecting climbers with coaches",
+  description:
+    "Comprehensive platform designed to connect climbing experts with climbers of all levels",
 };
 
 export default function RootLayout({
