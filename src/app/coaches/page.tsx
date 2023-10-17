@@ -1,15 +1,22 @@
 import { Metadata } from "next";
+import { Hero } from "./_components/Hero";
+import { Features } from "./_components/Features";
+import { Form } from "./_components/Form";
+import { Footer } from "./_components/Footer";
 
 export const metadata: Metadata = {
-  title: "Climbing Craft - Join as a Coach",
+  title: "Join as a Coach - Climbing Craft",
   description:
     "Join Climbing Craft as a Coach and start building your profile today!",
 };
 
 const Coaches = () => (
-  <main className="flex min-h-screen justify-center items-center p-4">
-    <h1>Coaches</h1>
-  </main>
+  <>
+    <Hero />
+    <Features />
+    <Form />
+    <Footer />
+  </>
 );
 
 export default Coaches;
