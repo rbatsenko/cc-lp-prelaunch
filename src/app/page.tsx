@@ -1,9 +1,9 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-6xl font-bold text-center">Climbing Craft</h1>
+    <main className="flex min-h-screen justify-center items-center p-4">
+      <h1 className="text-2xl font-bold text-center sm:text-3xl">
+        Climbing Craft
+      </h1>
     </main>
   );
 }
