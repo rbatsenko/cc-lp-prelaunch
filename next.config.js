@@ -1,5 +1,7 @@
+const { withAxiom } = require("next-axiom");
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig = withAxiom({
   async redirects() {
     return [
       {
@@ -9,6 +11,6 @@ const nextConfig = {
       },
     ];
   },
-};
+});
 
 module.exports = nextConfig;

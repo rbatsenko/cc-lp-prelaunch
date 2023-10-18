@@ -1,14 +1,17 @@
 "use client";
 
+import { useLogger } from "next-axiom";
 import Link from "next/link";
 
 export const HeroButtons = () => {
+  const log = useLogger();
+
   const handleClickSignUp = () => {
-    console.info("Sign Up button clicked");
+    log.info("Sign Up button clicked");
   };
 
   const handleClickLearnMore = () => {
-    console.info("Learn More button clicked");
+    log.info("Learn More button clicked");
   };
 
   return (

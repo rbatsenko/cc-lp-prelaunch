@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { AxiomWebVitals } from "next-axiom";
 import "./styles/tailwind.css";
 import { FC, PropsWithChildren } from "react";
 import { Footer } from "@/components/Footer";
@@ -33,6 +34,7 @@ const RootLayout: FC<PropsWithChildren> = ({ children }) => (
       {children}
       <Footer />
       <Analytics />
+      <AxiomWebVitals />
     </body>
   </html>
 );
