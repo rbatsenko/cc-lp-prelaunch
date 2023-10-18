@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Form = () => (
   <div className="bg-white py-16 sm:pt-24 sm:pb-16" id="join">
     <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -28,9 +30,13 @@ export const Form = () => (
           </div>
           <p className="mt-4 text-sm leading-6 text-gray-300">
             We care about your data. Read our{" "}
-            <a href="#" className="font-semibold text-white">
+            <Link
+              href="/privacy-policy"
+              target="_blank"
+              className="font-semibold text-white"
+            >
               privacy policy
-            </a>
+            </Link>
             .
           </p>
         </form>
