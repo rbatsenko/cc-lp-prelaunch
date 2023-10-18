@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
   // Add a row to the database
   const addRowResponse = await addRowToDatabase({ firstName, lastName, email });
   // Log the response from Notion
-  console.info(addRowResponse);
+  console.info(JSON.stringify(addRowResponse));
 
   // TODO: Send email to the user
 
