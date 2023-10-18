@@ -55,8 +55,8 @@ export const Form = () => (
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(512 512) rotate(90) scale(512)"
             >
-              <stop stopColor="#7775D6" />
-              <stop offset={1} stopColor="#E935C1" stopOpacity={0} />
+              <stop stopColor="#7775d6" />
+              <stop offset={1} stopColor="#5f35e9" stopOpacity={0} />
             </radialGradient>
           </defs>
         </svg>
