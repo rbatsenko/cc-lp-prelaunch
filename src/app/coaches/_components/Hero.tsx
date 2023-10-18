@@ -34,11 +34,19 @@ export const Hero = () => {
             Unlock Your Potential as a Climbing Coach
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Are you a passionate climbing coach, an accomplished athlete, or an
-            expert route setter ready to make a real impact in the world of
-            climbing? Join our exclusive community of climbing mentors and share
-            your knowledge with climbers eager to learn, grow, and become
-            better.
+            Are you a passionate{" "}
+            <span className="font-semibold text-gray-900">climbing coach</span>,
+            an{" "}
+            <span className="font-semibold text-gray-900">
+              accomplished athlete
+            </span>
+            , or an{" "}
+            <span className="font-semibold text-gray-900">
+              expert route setter
+            </span>{" "}
+            ready to make a real impact in the world of climbing? Join our
+            exclusive community of climbing mentors and share your knowledge
+            with climbers eager to learn, grow, and become better.
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <HeroButtons />
@@ -52,6 +60,7 @@ export const Hero = () => {
                 alt="App screenshot"
                 width={2400}
                 height={1500}
+                priority
                 className="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
               />
             </div>

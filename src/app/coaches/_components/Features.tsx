@@ -11,7 +11,7 @@ const features = [
   {
     name: "Personalized Coaching",
     description:
-      "Tailor coaching to meet each climber's unique needs and goals. Create personalized training plans for success.",
+      "Tailor coaching to meet each climber's unique needs and goals. Add your own services, prices, and create personalized training plans for success.",
     emoji: "🎯",
   },
   {
@@ -25,6 +25,18 @@ const features = [
     description:
       "Connect with climbers, schedule video consultations, as well as in-person sessions, and receive payments seamlessly on our secure and user-friendly platform.",
     emoji: "🔒",
+  },
+  {
+    name: "Support Your Passion",
+    description:
+      "Working with Climbing Craft can be a part-time job that allows you to support your climbing endeavors while sharing your expertise with others.",
+    emoji: "💸",
+  },
+  {
+    name: "Community Engagement",
+    description:
+      "Join an active and supportive community of climbing mentors, where you can share experiences, exchange insights, connect with fellow coaches, and learn from each other.",
+    emoji: "🤝",
   },
 ];
 export const Features = () => (
