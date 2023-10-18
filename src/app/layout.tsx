@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://join.climbingcraft.com"),
   title: "Climbing Craft - Connecting climbers with coaches",
   description:
     "Climbing Craft is a comprehensive platform designed to connect climbing coaches with climbers of all levels, from beginners to advanced enthusiasts. It aims to enhance the learning and training experience for climbers by providing them with personalized coaching, analysis, and guidance.",
