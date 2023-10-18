@@ -5,7 +5,6 @@ import { AxiomWebVitals } from "next-axiom";
 import "./styles/tailwind.css";
 import { FC, PropsWithChildren } from "react";
 import { Footer } from "@/components/Footer";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,9 +31,6 @@ export const metadata: Metadata = {
 const RootLayout: FC<PropsWithChildren> = ({ children }) => (
   <html lang="en" className="scroll-smooth">
     <body className={inter.className}>
-      {process.env.NEXT_PUBLIC_VERCEL_ENV === "production" && (
-        <GoogleAnalytics />
-      )}
       {children}
       <Footer />
       <Analytics />
