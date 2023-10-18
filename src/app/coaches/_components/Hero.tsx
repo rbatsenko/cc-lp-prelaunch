@@ -1,4 +1,5 @@
 import Image from "next/image";
+import appScreenshot from "../_images/cc-dashboard.png";
 
 export const Hero = () => (
   <div className="relative isolate overflow-hidden bg-white">
@@ -55,10 +56,10 @@ export const Hero = () => (
         <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
           <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
             <Image
-              src="https://tailwindui.com/img/component-images/project-app-screenshot.png"
+              src={appScreenshot}
               alt="App screenshot"
-              width={2432}
-              height={1442}
+              width={2400}
+              height={1500}
               className="w-[76rem] rounded-md shadow-2xl ring-1 ring-gray-900/10"
             />
           </div>

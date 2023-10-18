@@ -7,7 +7,7 @@ import { Footer } from "./_components/Footer";
 export const metadata: Metadata = {
   title: "Join as a Coach - Climbing Craft",
   description:
-    "Join Climbing Craft as a Coach and start building your profile today!",
+    "Are you a passionate climbing coach, an accomplished athlete, or an expert route setter ready to make a real impact in the world of climbing? Join our exclusive community of climbing mentors and share your knowledge with climbers eager to learn, grow, and become better.",
 };
 
 const Coaches = () => (

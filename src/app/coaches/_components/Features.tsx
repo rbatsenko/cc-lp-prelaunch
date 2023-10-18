@@ -17,13 +17,13 @@ const features = [
   {
     name: "Diverse Expertise",
     description:
-      "We welcome coaches, athletes, and route setters with diverse expertise. Share your valuable insights and skills.",
+      "We welcome coaches, athletes, route setters, and climbers who consider themselves experts in specific areas. Offer your valuable insights, skills, and guidance for our community.",
     emoji: "🌍",
   },
   {
     name: "Secure Platform",
     description:
-      "Connect with climbers, offer video consultations, and receive payments seamlessly on our secure and user-friendly platform.",
+      "Connect with climbers, schedule video consultations, as well as in-person sessions, and receive payments seamlessly on our secure and user-friendly platform.",
     emoji: "🔒",
   },
 ];
