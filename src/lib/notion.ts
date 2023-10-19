@@ -1,5 +1,6 @@
 import { Client } from "@notionhq/client";
 import { SignUpFormData } from "./form";
+import { CountryCode, getCountryName } from "./countries";
 
 const notion = new Client({
   auth: process.env.NOTION_API_KEY,
@@ -64,7 +65,9 @@ export const addRowToDatabase = async ({
                 {
                   type: "text",
                   text: {
-                    content: metadata.country,
+                    content:
+                      getCountryName(metadata.country as CountryCode) ??
+                      metadata.country,
                   },
                 },
               ],
