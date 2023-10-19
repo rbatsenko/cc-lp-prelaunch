@@ -1,8 +1,10 @@
 "use client";
 
+import { SignUpFormData } from "@/lib/form";
+import { Geo } from "@vercel/edge";
 import Link from "next/link";
 import Script from "next/script";
-import { FormEvent } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
 const ReCaptchaScript = () => (
@@ -11,7 +13,7 @@ const ReCaptchaScript = () => (
   />
 );
 
-const signUp = (captcha: string, formData: FormData) => {
+const signUp = (captcha: string, formData: FormData, metadata?: Geo) => {
   const loadingToastId = toast.loading("Signing up...");
 
   fetch("/api/signup", {
@@ -20,6 +22,7 @@ const signUp = (captcha: string, formData: FormData) => {
     body: JSON.stringify({
       captcha,
       ...Object.fromEntries(formData),
+      metadata,
     }),
   })
     .then((res) => {
@@ -36,6 +39,10 @@ const signUp = (captcha: string, formData: FormData) => {
 };
 
 export const SignUpForm = () => {
+  const [metadata, setMetadata] = useState<
+    SignUpFormData["metadata"] | undefined
+  >(undefined);
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -44,9 +51,17 @@ export const SignUpForm = () => {
     grecaptcha.ready(() => {
       grecaptcha
         .execute(process.env.NEXT_PUBLIC_RECAPTCHA!, { action: "submit" })
-        .then((token) => signUp(token, formData));
+        .then((token) => signUp(token, formData, metadata));
     });
   };
+
+  useEffect(() => {
+    fetch("/api/metadata")
+      .then((res) => res.json())
+      .then((data) => {
+        setMetadata(data);
+      });
+  }, []);
 
   return (
     <>

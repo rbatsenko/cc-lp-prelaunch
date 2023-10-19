@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
   const requestBody = await req.json();
   const data = signUpFormRequestSchema.parse(requestBody);
 
-  const { firstName, lastName, email, captcha } = data;
+  const { firstName, lastName, email, captcha, metadata } = data;
 
   // Validate a "token" that the client-side reCAPTCHA script generated for the user
   const captchaResponse = await fetch(verifyEndpoint, {
@@ -36,7 +36,12 @@ export async function POST(req: NextRequest) {
   }
 
   // Add a row to the database
-  const addRowResponse = await addRowToDatabase({ firstName, lastName, email });
+  const addRowResponse = await addRowToDatabase({
+    firstName,
+    lastName,
+    email,
+    metadata,
+  });
   // Log the response from Notion
   console.info(JSON.stringify(addRowResponse));
 
